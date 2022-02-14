@@ -21,7 +21,7 @@ The script takes only files from where is it. You must place it on the same path
 │  ├─ 📄 one       more $ .txt  
 │  ├─ 📜 RenameCorrectlyFiles.ps1    
 │  ├─ 📄 Ze last [test file].txt  
-│  ├─ 📄 2022-02-14-00042354.png  
+│  ├─ 🖼️ 2022-02-14-00042354.png  
 ├─ 📂 UwU/  
 │  ├─ 📄 Cat tier list.txt  
 ```
