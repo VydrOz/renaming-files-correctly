@@ -15,15 +15,15 @@ The script takes only files from where is it. You must place it on the same path
 │  ├─ 📹 RickRoll.wav  
 ├─ 📂 TestFolder/  
 │  ├─ 📂 1/  
-│  │  ├─ 📄 text file.txt  
+│  │  └─ 📄 text file.txt  
 │  ├─ 📄 another #   test  file----  .txt  
 │  ├─ 📄 a test     file      .txt  
 │  ├─ 📄 one       more $ .txt  
 │  ├─ 📜 RenameCorrectlyFiles.ps1    
 │  ├─ 📄 Ze last [test file].txt  
-│  ├─ 🖼️ 2022-02-14-00042354.png  
+│  └─ 🖼️ 2022-02-14-00042354.png  
 ├─ 📂 UwU/  
-│  ├─ 📄 Cat tier list.txt  
+│  └─ 📄 Cat tier list.txt  
 ```
 ### Script result
 
