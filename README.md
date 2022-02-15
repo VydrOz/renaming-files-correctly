@@ -12,7 +12,7 @@ The script takes only files from where is it. You must place it on the same path
 ```
 📂 Desktop/  
 ├─ 📂 Memes/  
-│  ├─ 📹 RickRoll.wav  
+│  └─ 📹 RickRoll.wav  
 ├─ 📂 TestFolder/  
 │  ├─ 📂 1/  
 │  │  └─ 📄 text file.txt  
