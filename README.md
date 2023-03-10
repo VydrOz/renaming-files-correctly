@@ -1,6 +1,6 @@
 ## 📖 Context
 
-Following a personal request from a family member. I wrote a script to rename files (type defined in, e.g. ".txt") by removing special characters from a predefined list and replacing spaces with an underscore.
+Following a personal request from a family member. I wrote a script to rename files (type defined in, e.g. "`.txt`") by removing special characters from a predefined list and replacing spaces with an underscore.
 
 ## 💡 Informations
 
@@ -28,4 +28,3 @@ The script takes only files from where is it. You must place it on the same path
 ### Script result
 
 ![image](https://user-images.githubusercontent.com/61025448/153945096-a5e20011-c68b-43b1-b697-250e8eda20e2.png)
-
