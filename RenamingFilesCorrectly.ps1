@@ -33,13 +33,12 @@ $files = Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
 $hashPreview | Format-Table @{L='Before';E={"$e[0m$($_.Name)${e}[0m"}; width = 60}, @{L='After';E={"$e[93m$($_.Value)${e}[0m"}; width = 60}
 
 # confirm modifications Y/N
-$msg     = 'Are you sure you want to rename these files?
-    '
+$msg = 'Are you sure you want to rename these files?'
 $options = '&Yes', '&No'
-$default = 1  # 0=Yes, 1=No
+$default = 1	# 0=Yes, 1=No
 $response = $Host.UI.PromptForChoice('', $msg, $options, $default)
 
-if ($response -eq 0) { #Yes ? start rename process
+if ($response -eq 0) { # Yes ? start rename process
     $files = Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
     Foreach-Object {
         $fileName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
@@ -48,8 +47,11 @@ if ($response -eq 0) { #Yes ? start rename process
     }
     Write-Host -ForegroundColor Green "Operation completed"
 }
+else {
+    Write-Host -ForegroundColor Orange "Operation canceled"
+}
 
 # end
 Write-Host ""
-function pause{ $null = Read-Host 'Press Enter to continue...' }
+function pause{ $null = Read-Host 'Press any key to exit...' }
 pause
