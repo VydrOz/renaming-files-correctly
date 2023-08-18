@@ -1,12 +1,11 @@
 # Table of Contents
-- [Table of Contents](#table-of-contents)
-  - [📖 Context](#-context)
-    - [v1](#v1)
-    - [v2](#v2)
-  - [💡 Informations](#-informations)
-  - [🖥️ Preview](#️-preview)
-    - [v1 - Result](#v1---result)
-    - [v2 - Steps](#v2---steps)
+- [📖 Context](#-context)
+  - [v1](#v1)
+  - [v2](#v2)
+- [💡 Informations](#-informations)
+- [🖥️ Preview](#️-preview)
+  - [v1 - Result](#v1---result)
+  - [v2 - Steps](#v2---steps)
 
 
 ## 📖 Context
