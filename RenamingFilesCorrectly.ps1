@@ -7,18 +7,21 @@ $specialChars = '-#${}()[]+' 		# list of characters to remove
 $extension = ".txt"         		# file type to rename
 
 # functions
+function pause{ param( [String] $msg ) $null = Read-Host "${msg}" }
+
 function SerializeString {
     param ([string]$str, [string]$ext)
-    $rePattern = ($specialChars.ToCharArray() |ForEach-Object { [regex]::Escape($_) }) -join "|"
+    $rePattern = ($specialChars.ToCharArray() | ForEach-Object { [regex]::Escape($_) }) -join "|"
     $str = $str -replace $rePattern,''      # remove special characters
     $str = $str.Trim() -replace '\s+', '_'  # remove first and last spaces & replace spaces by "_"
     "${str}${ext}"
 }
+
 Write-Host "Type of file retrieved : " -NoNewLine
 Write-Host -ForegroundColor Blue $extension
 Write-Host "Special characters will being removed : " -NoNewLine
 Write-Host -ForegroundColor Blue $specialChars
-Write-Host ""
+""
 
 # start preview
 Write-Host -ForegroundColor Green "Overview of changes"
@@ -52,6 +55,5 @@ else {
 }
 
 # end
-Write-Host ""
-function pause{ $null = Read-Host 'Press any key to exit...' }
-pause
+""
+pause 'Press any key to exit...'
