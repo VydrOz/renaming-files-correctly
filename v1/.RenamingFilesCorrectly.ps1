@@ -7,7 +7,7 @@ $specialChars = '-#${}()[]+' 		# list of characters to remove
 $extension = ".txt"         		# file type to rename
 
 # functions
-function pause{ param( [String] $msg ) $null = Read-Host "${msg}" }
+function pause { param( [String] $msg ) $null = Read-Host "${msg}" }
 
 function SerializeString {
     param ([string]$str, [string]$ext)
@@ -25,7 +25,7 @@ Write-Host -ForegroundColor Blue $specialChars
 
 # start preview
 Write-Host -ForegroundColor Green "Overview of changes"
-$files = Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
+Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
     Foreach-Object {
         $fileName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
         $newFileName = SerializeString $fileName $extension
@@ -42,12 +42,12 @@ $default = 1	# 0=Yes, 1=No
 $response = $Host.UI.PromptForChoice('', $msg, $options, $default)
 
 if ($response -eq 0) { # Yes ? start rename process
-    $files = Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
-    Foreach-Object {
-        $fileName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
-        $newFileName = SerializeString $fileName $extension
-        $_ | Rename-Item -NewName $newFileName
-    }
+    Get-ChildItem -Path $PSScriptRoot -Filter "*${extension}" |
+        Foreach-Object {
+            $fileName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
+            $newFileName = SerializeString $fileName $extension
+            $_ | Rename-Item -NewName $newFileName
+        }
     Write-Host -ForegroundColor Green "Operation completed"
 }
 else {
