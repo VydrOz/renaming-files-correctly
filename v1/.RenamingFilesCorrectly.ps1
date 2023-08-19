@@ -56,4 +56,4 @@ else {
 
 # end
 ""
-pause 'Press any key to exit...'
+pause 'Press Enter to exit...'

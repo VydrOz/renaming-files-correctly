@@ -15,7 +15,7 @@ Write-Host "Current Path : " -NoNewLine
 Write-Host -ForegroundColor Blue $PSScriptRoot
 
 ""
-pause 'Press any key to start renaming process from the csv file specified'
+pause 'Press Enter to start renaming process from the csv file specified'
 ""
 
 # skip row header and read csv
@@ -34,4 +34,4 @@ $csvFile | Select-Object -Skip 1  | Foreach-Object {
 
 # end
 ""
-pause 'Press any key to exit...'
+pause 'Press Enter to exit...'

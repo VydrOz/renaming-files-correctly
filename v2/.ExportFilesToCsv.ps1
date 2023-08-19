@@ -31,4 +31,4 @@ $files | Export-Csv -Path .\$csvExportFileName -Delimiter ';' -NoTypeInformation
 ""
 Write-Host -ForegroundColor Green "Extraction complete"
 ""
-pause "Press any key to exit..."
+pause "Press Enter to exit..."
